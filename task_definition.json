@@ -1,0 +1,26 @@
+{
+    "executionRoleArn": "arn:aws:iam::463720542314:role/AWSEcsTaskRole",
+    "containerDefinitions": [
+        {
+            "name": "titan",
+            "image": "463720542314.dkr.ecr.us-east-1.amazonaws.com/test:latest",
+            "essential": true,
+            "memory": "2048",
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ],
+    "family": "application-stack",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "volumes": [],
+    "placementConstraints": []
+}
