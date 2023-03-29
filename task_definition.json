@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "titan",
-            "image": "463720542314.dkr.ecr.us-east-1.amazonaws.com/test:latest",
+            "image": "463720542314.dkr.ecr.us-east-1.amazonaws.com/ladubief-ecr",
             "essential": true,
             "memory": "2048",
             "portMappings": [
