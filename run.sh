@@ -1,6 +1,5 @@
 #!/bin/sh
 
-cd titan
 python manage.py makemigrations
 python manage.py migrate --no-input
 
