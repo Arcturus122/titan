@@ -1,16 +1,16 @@
-from python:3.8-slim
+FROM python:3.8-slim
 
-run apt update && apt install nginx -y
+RUN apt update && apt install nginx -y
 
-copy ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-copy . .
+COPY . .
 
-run pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
-workdir /titan
-copy run.sh .
+WORKDIR /titan
+COPY run.sh .
 
-run chmod +x run.sh
+RUN chmod +x run.sh
 
-cmd ["./run.sh"]
+CMD ["./run.sh"]
